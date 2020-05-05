@@ -1,0 +1,25 @@
+/*公共动画从下到上*/
+@keyframes fadeInDown{
+	from{transform:translateY(0px); opacity: 0;}
+	to{transform: translateY(50px); opacity: 1;}
+}
+/*公共动画从左到右*/
+@keyframes rollInRight{
+	from{transform: translateX(-100px);opacity: 0;}
+	to{transform: translateX(0px);opacity: 1;}
+}
+/* 透明度 */
+@keyframes rollInOpa{
+	from{ opacity: 0;}
+	to{ opacity: 1;}
+}
+/*第一屏动画*/
+.animateIndown{
+	animation: fadeInDown 1s ease .5s 1 both;
+}
+.animateInright{
+	animation: rollInRight 1s ease .5s 1 both;
+}
+.animateOpa{
+	animation: rollInOpa 1s ease .5s 1 both;
+}

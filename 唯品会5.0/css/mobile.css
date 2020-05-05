@@ -1,0 +1,322 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font: 12px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    min-width: 1000px;
+}
+/*头部*/
+.mobile_header{
+	width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    background: #fff;
+}
+
+.mobile_header_in{
+	    width: 960px;
+    margin: 0 auto;
+    color: #f10180;
+    padding: 0 0 0 20px;
+}
+.mobile_header_in .logo{
+	float: left;
+    margin: 8px 0 0;
+}
+a{
+	text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+}
+a,img{
+	    vertical-align: top;
+}
+.logo_text{
+	display: inline-block;
+	float: left;
+    width: 200px;
+    height: 27px;
+    background: url(../images/mobile/slogan.png) left 0px no-repeat;
+       margin: 12px 0px 0px 10px;
+    padding: 0px 0px 0px 12px;
+}
+.menu_list{
+	    float: right;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px 0 0;
+}
+.menu_list>a{
+	    font-family: tahoma,arial;
+    font-size: 14px;
+    color: #424141;
+    padding: 0 0 0 65px;
+}
+.clearfix:after{
+	content: '.';
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.page{
+	position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+.page_sm .lady02 img, .page_sm .window img, .page_xs .lady02 img, .page_xs .window img {
+    width: 80%;
+    height: 80%;
+    
+}
+/*第一屏*/
+.page_1{
+	background: url(../images/mobile/bg1.png) #c5dfd5;
+    height: 925px;
+}
+.page_in{
+	width: 960px;
+    margin: 0 auto;
+}
+.page_1g{
+	height: 590px;
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+    top: 50%;
+    margin-top: -295px;
+}
+.light{
+	position: absolute;
+    left: 50px;
+    top: 53px;
+    width: 72px;
+    height: 442px;
+    background: url(../images/mobile/light.png) no-repeat;
+}
+.lady01{
+	position: absolute;
+    left: 124px;
+    top: 88px;
+    width: 496px;
+    height: 504px;
+     background: url(../images/mobile/lady01.png) no-repeat; 
+}
+.page_right{
+	 height: 426px;
+    z-index: 999;
+    position: fixed;
+    top: 200px;
+    right: 365px;
+    width: 343px;
+    font-family: 微软雅黑;
+ 
+}
+.step_text{
+	opacity: 1;
+    float: right;
+    width: 343px;
+    height: 101px;
+    background: url(../images/mobile/text3.png) no-repeat;
+    background-position-y: 0px;
+    /* display: none; */
+
+}
+.code_area{
+	clear: right;
+    float: right;
+    width: 253px;
+    height: 315px;
+    margin: 10px 0 0;
+    background: url(../images/mobile/code02.png) no-repeat;
+}
+.download_btn{
+	    display: block;
+    width: 175px;
+    height: 48px;
+    margin: 239px auto 0;
+    background: url(../images/mobile/download_btn.png) no-repeat 0 0;
+}
+/*第二屏*/
+.page_2{
+	background: url(../images/mobile/bg2.png) #c0d7e6;
+    height: 925px;
+}
+.window{
+	position: absolute;
+    left: 162px;
+    top: -30px;
+    width: 128px;
+    height: 149px;
+    background: url(../images/mobile/window.png) no-repeat;
+}
+.lady02>img{
+    margin-top: 105px;
+}
+
+/*第三屏*/
+.page_3{
+	background: url(../images/mobile/bg3.png) #e8d1c2;
+    height: 925px;
+}
+.page_sm{
+	height: 472px;
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+    top: 50%;
+    margin-top: -235px;
+}
+.plant{
+	position: absolute;
+    left: 264px;
+    top: -55px;
+    width: 270px;
+    height: 157px;
+     background: url(../images/mobile/plant.png) no-repeat; 
+}
+
+/*第四屏*/
+.page_4{
+	background: url(../images/mobile/bg4.png) #e8d1c2;
+    height: 925px;
+}
+.alipay{
+	position: absolute;
+    left: 386px;
+    top: 40px;
+    width: 119px;
+    height: 153px;
+     background: url(../images/mobile/alipay.png) no-repeat; 
+}
+.lady04{
+	z-index: 1111;
+}
+
+
+/* 弹窗 */
+.popup{
+    width: 660px;
+    height: 370px;
+    background: url(../images/mobile/bg_window2.png)0px 0px no-repeat;
+    background-size: 662px 385px;
+    position: absolute;
+       top: 200px;
+    left: 522px;
+    z-index: 111111;
+    overflow: hidden;
+    display: none;
+}
+.popup_top{
+    position: relative;
+    height: 40px;
+     width: 640px;
+    border-bottom: 3px solid #de3083;
+    margin-left: 10px;
+}
+.popup_top>span{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 16px;
+}
+.close{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 17px;
+    background: url(../images/mobile/i-close.png) 4px 0px no-repeat;
+    cursor: pointer;
+
+}
+.popup_mid>ul{
+    list-style: none;
+    width: 579px;
+    height: 135px;
+    margin: 10px 43px;
+}
+.popup_mid>ul>li{
+    float: left;
+    margin: 9px 7px;
+}
+
+.popup_mid>ul>li>span{
+    width: 88px;
+    height: 118px;
+    display: inline-block;
+    line-height: 195px;
+    margin: 0px 6px;
+    text-align: center;
+    transition: all .5s;
+}
+.Android{
+    
+    background: url(../images/mobile/android.png) 0px 0px no-repeat;
+}
+.iPhone{
+    background: url(../images/mobile/iphone.png) 0px 0px no-repeat;
+}
+.iPad{
+    background: url(../images/mobile/ipad.png) 0px 0px no-repeat;
+}
+.Windows{
+    background: url(../images/mobile/windows.png) 0px 0px no-repeat;
+}
+.wap{
+    background: url(../images/mobile/wap.png) 0px 0px no-repeat;
+}
+.popup_footer{
+    position: relative;
+}
+.popup_footer>ul{
+    list-style: none;
+    width: 3300px;
+    height: 300px;
+    position: absolute;
+    left: 0px;
+    transition: all .5s;
+}
+.popup_footer>ul>li{
+    float: left;
+    position: relative;
+    width: 660px;
+}
+.down{
+    display: inline-block;
+    width: 140px;
+    margin-left: 151px;
+    position: relative;
+    bottom: 25px;
+    left: 20px;
+}
+
+.warp{
+    display: inline-block;
+    width: 110px;
+    margin-left: 85px;
+    position: relative;
+    bottom: -24px;
+    left: 20px;
+}
+
+.down2{
+    display: inline-block;
+    width: 250px;
+   position: relative;
+   bottom: 50px;
+   left: 70px;
+    margin-left: 50px;
+
+}

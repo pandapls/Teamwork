@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>唯品快枪</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/*大图片*/
+			
+			.bagimg {
+				width: 1663px;
+				height: 550px;
+				background: url(images/quickly/bg.jpg) 0px 0px;
+			}
+			/*必抢*/
+			.section-boxx{
+				background: #fafafa;
+				width: 100%;
+			}
+			.must-size {
+				width: 1110px;
+				height: 63px;
+				    background: #fff;
+				    border: 1px solid #e8e7e7;
+				    border-bottom: none;
+			}
+			
+			.must-left {
+				width: 557px;
+				height: 63px;
+				
+				border-bottom: none;
+				float: left;
+			}
+			
+			.must-left>a {
+				display: inline-block;
+				width: 120px;
+				height: 38px;
+				text-align: center;
+				font-size: 16px;
+				line-height: 34px;
+				color: white;
+				background: url(images/quickly/img32.png) 0px 0px no-repeat;
+				margin: 13px 217px;
+			}
+			
+			.must-right {
+				width: 549px;
+				height: 63px;
+				border-left: 1px solid #e8e7e7;
+				border-bottom: none;
+				float: right;
+			}
+			
+			.must-right>a {
+				display: inline-block;
+				font-size: 16px;
+				text-align: center;
+				color: black;
+				margin: 13px 217px;
+			}
+			/*产品区*/
+			
+			.f-section {
+				width: 1200px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.listL1 {
+				display: inline-block;
+				width: 548px;
+				height: 258px;
+				border: 1px solid deeppink;
+				border-radius: 10px 10px;
+				position: relative;
+				 background: #fff;
+				     margin: 5px;
+				     cursor: pointer;
+			}
+			
+			.listL2 {
+				display: inline-block;
+			    width: 548px;
+			    height: 258px;
+			    border-radius: 10px 10px;
+			    position: relative;
+			    margin: 5px;
+			    background: #fff;
+			    cursor: pointer;
+			}
+			
+			.mainImg {
+				width: 220px;
+				height: 220px;
+				position: absolute;
+				top: 20px;
+				left: 28px;
+			}
+			
+			.mainImg>.m-a {
+				width: 64px;
+				height: 64px;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: url(../images/quickly/img18.png) 0px 0px no-repeat;
+			}
+			
+			.mainImg>.m-b {
+				width: 48px;
+				height: 48px;
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: url(../images/quickly/img31.png) 0px 0px no-repeat;
+			}
+			
+			.mainImg>.m-c {
+				width: 24px;
+				height: 52px;
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				right: 1px;
+				background: url(../images/quickly/img4.png) 0px 0px no-repeat;
+			}
+			
+			.mainFont {
+				width: 289px;
+				height: 258px;
+				float: right;
+				position: relative;
+			}
+			
+			.mainFont>.m-d {
+				width: 100px;
+				height: 50px;
+				display: inline-block;
+				color: #FF1493;
+				font-size: 26px;
+				font-weight: 100;
+				position: absolute;
+				top: 11px;
+				right: 187px;
+			}
+			
+			.mainFont>.m-e {
+				width: 28px;
+				height: 48px;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				right: 46px;
+				background: url(../images/quickly/img23.png) 0px 0px no-repeat;
+			}
+			
+			.m-recored {
+				width: 289px;
+				height: 20px;
+				font-size: 15px;
+				margin-top: 93px;
+			}
+			
+			.m-recored2 {
+				width: 289px;
+				height: 25px;
+				font-size: 22px;
+				font-weight: bolder;
+				margin: 12px 0px;
+			}
+			
+			.m-shopValue {
+				width: 289px;
+				height: 30px;
+				margin-top: 5px;
+			}
+			
+			.m-shopValue>.m-f {
+				width: 50px;
+				height: 20px;
+				display: inline-block;
+				background-color: #FF1493;
+				font-size: 12px;
+				color: white;
+				border-radius: 5px 5px;
+				text-align: center;
+			}
+			
+			.m-shopValue>.m-g {
+				font-size: 24px;
+				color: deeppink;
+			}
+			
+			.m-num {
+				width: 289px;
+				height: 21px;
+				font-size: 14px;
+				color: darkgray;
+				margin-top: 15px;
+				position: relative;
+			}
+			
+			.m-num>.m-nimg {
+				width: 138px;
+				height: 3px;
+				display: inline-block;
+				background-color: pink;
+			}
+			
+			.m-num>.m-nimg2 {
+				width: 110px;
+				height: 3px;
+				display: inline-block;
+				background-color: deeppink;
+				position: absolute;
+				bottom: 5px;
+				left: 0;
+			}
+			/*右边固定导航*/
+			
+			.fixNav {
+				width: 90px;
+				height: 576px;
+				    border: 1px solid #d6d6d6;
+				position: fixed;
+				top: 190px;
+                right: 200px;
+                display: none;
+			}
+			
+			.fixNav li {
+				width: 86px;
+				height: 18px;
+				list-style: none;
+				text-align: center;
+				color: darkgray;
+			}
+			.backTop{
+				display: inline-block;
+				width: 10px;
+				height: 15px;
+				background: url(images/logo38.png)  -256px -163px no-repeat;
+			}
+			.fixNav li>a {
+				display: inline-block;
+				width: 56px;
+				height: 15px;
+				line-height: 40px;
+				color: gray;
+				text-align: center;
+				font-size: 14px;
+			}
+			.fixNav li>a:hover{
+				color: deeppink;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/data.js">
+		</script>
+	</head>
+
+	<body>
+		<header class="header">
+			<nav class="nav-top">
+				<div class="n-t-box">
+					<div class="ntb-left">深圳市<span class="angle"></div>
+					<ul class="ntb-ul">
+						<li class="ntb-ul-li-1">
+							<a href="#" >请登录</a><i></i>
+							<div class="listbox1">
+								<div class="listbox1-1">
+									<i id="login">请登录</i>
+									<span></span><p>您好![请登录]</p>
+									<ul>
+										<li><a href="#">我的收藏</a> </li>
+										<li><a href="#">我的订单</a></li>
+										<li><a href="#">零钱</a></li>
+										<li><a href="#">我的优惠卷</a></li>
+										<li><a href="#">我的唯品币</a></li>
+										<li><a href="#">唯品金融</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li><a href="registered.html">注册</a><i></i></li>
+						<li class="mr"><a href="#" class="pl"><span id="gift"></span>签到有礼</a><i></i></li>
+						<li><a href="#">我的订单</a><i></i></li>
+						<li class="mr ntb-ul-li-2">
+							<a href="#">我的特卖</a><span class="angle"></span><i></i>
+							<div class="listbox2">
+								<ul>
+									<li><a href="#">商品收藏</a></li>
+									<li><a href="#">品牌收藏</a></li>
+									<li><a href="#">我的足迹</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="mr ntb-ul-li-3">
+							<a href="#" class="pr">会员俱乐部</a><span class="angle"></span><i></i>
+							<div class="listbox3">
+								<ul>
+									<li><a href="#">俱乐部首页</a></li>
+									<li><a href="#">唯品币兑换</a></li>
+								</ul>
+							</div>
+						</li>
+						<li  class="mr ntb-ul-li-4">
+							<a href="#">客户服务</a><span class="angle"></span><i></i>
+							<div class="listbox4">
+								<ul>
+									<li><a href="#">联系客服</a></li>
+									<li><a href="helpcenter.html">帮助中心</a></li>
+									<li><a href="#">服务中心</a></li>
+									<li><a href="#">知识产权投书</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="ntb-ul-li-5">
+							<span class="phone"></span><a href="mobile.html">手机版</a><i></i>
+							<div class="listbox5">
+								<img src="images/index43.jpg" width="161" height="161"/>
+								<h3>随时逛 及时抢</h3>
+							</div>
+						</li>
+						<li class="ntb-ul-li-6">
+							<a href="#">更多</a><span class="angle"></span>
+							<div class="listbox6">
+								<div class="listbox6-box1">
+									<a href="#">更多</a><span class="angle-pink"></span>
+								</div>
+								<div class="listbox6-box2">
+									<p>合作专区</p>
+									<p><a href="">唯品卡</a></p>
+								</div>
+								<div class="listbox6-box3">
+									<p>关于我们</p>
+									<p><a href="#">Sell on vip</a>
+									<a href="#">品牌招商</a>
+									<a href="#">官方博客</a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="head">
+				<div class="h-box">
+					<div class="hb-left fl">
+						<a href="#"><img src="images/wph.gif"/></a>
+					</div>
+					<div class="hb-left2 fl">
+						<a href="#" ></a>
+						<a href="#"></a>
+						<a href="#"></a>
+						<img src="images/logo2.png" width="304px" height="100px"/>
+					</div>
+					<div class="hb-form">
+						<input type="" name="" id="hb-f-input" placeholder="王牌爆款"/>
+						<ul class="list-input" >
+							<li><p>搜索历史</p></li>
+							<li>
+								<p>精选推荐</p>
+								<a href="#">大牌奥莱没一折起</a>
+								<a href="#">3折封顶 特惠疯抢</a>
+								<a href="#">斯凯奇</a>
+								<a href="#">女式羽绒服</a>
+								<a href="#">女皮衣/皮革</a>
+								<a href="#">男式羽绒服</a>
+								<a href="#">女式大衣</a>
+								<a href="#">女靴</a>
+								<a href="#">连衣裙</a>
+								<a href="#">女士棉衣</a>
+							</li>
+						</ul>
+						<ul class="list-input2" >
+							
+						</ul>
+						<a href="#" class="hb-f-btn">
+							<span class="hb-f-cir"></span>
+						</a>
+						<div class="hb-f-bottom">
+							<a href="#">王牌爆款</a>|
+							<a href="#">欧时力低至1.4折</a>|
+							<a href="#">男式羽绒低至99元</a>|
+							<a href="#">大牌3折封顶</a>
+						</div>
+						
+					</div>
+					<div class="hb-right fr">
+						<div class="tool">
+							<span class="ico-bag"></span>
+							<span>购物袋</span>
+							<span class="ico-bag2">0</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="nav-main">
+				<div class="n-m-box">
+					<ul class="n-m-ul">
+						<li class="n-m-red"><a href="#">
+							<img src="images/logo41.png"/>商品分类</a>
+							<div class="n-m-list1">
+								<ul class="n-m-list1-box1">
+								<li>
+									女装/男鞋/内衣
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>冬季热卖<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>人气美衣<i></i></dt>
+													<dd><a href="ShangPingYe.html">连衣裙</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>百搭上衣<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>外套<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>裤子<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>美裙衣橱<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>特色服饰<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>男士外套<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>男士内搭<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									女鞋/男鞋/箱包
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>女靴<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>女单鞋<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>女休闲裤<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>男休闲裤<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>男靴<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>男商务鞋<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>女包<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>男包<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>功能箱包<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									护肤彩妆/个户
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>画部护肤<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>精致彩妆<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>迷人香水<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>美甲<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>美容工具<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>洗发护发<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>沐浴润肤<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>男士护理<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>口腔护理<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									运动户外
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>运动鞋<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>运动服<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>运动配件<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>儿童鞋服<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>瑜伽健身<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>游泳装备<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>体育用品<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>运动配件<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>户外装备<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									家电数码
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>热销手机<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>手机配件<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>智能影音<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>电脑办公<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>摄影摄像<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>厨房电器<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>生活电器<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>美容护理<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>手机装饰<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									母婴童装
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>童装<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>婴幼专区<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>童鞋专区<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>奶粉食品<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>尿裤纸品<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>孕妈专区<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>母婴用品<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>玩具文具<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>儿童食品<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									手表配饰
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>精致好物<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>饰品专区<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>手表<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>黄金专区<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>玉石珍珠<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>砖石专区<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>围巾袜子专区<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>防晒专区<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>眼睛/伞<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									居家用品
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>家纺床品<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>纸品/百货<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>杯壶餐具<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>烹饪炊具<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>收纳晾晒<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>汽车用品<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>家饰布艺<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>卫浴/灯饰<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>百货商场<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									唯品生活
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>人气零食<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>营养保健<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>精选食材<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>精酿美酒<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>中式茗茶<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>传统滋补<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>冲调饮料<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>宠物<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>生鲜<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									唯品国际/唯品奢
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>全球馆<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>国际美妆<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												<dl>
+													<dt>唯品奢·男装<i></i></dt>
+													<dd><a href="#">羊绒/羊毛衫</a></dd>
+													<dd><a href="#">衬衫</a></dd>
+													<dd><a href="#">T恤</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">针织衫</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+												</dl>
+												<dl>
+													<dt>环球母婴<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>唯品奢·男装<i></i></dt>
+													<dd><a href="#">阔腿裤</a></dd>
+													<dd><a href="#">连体/背带裤</a></dd>
+													<dd><a href="#">哈伦裤</a></dd>
+													<dd><a href="#">西装裤</a></dd>
+													<dd><a href="#">羽绒裤</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+												</dl>
+												<dl>
+													<dt>海外营养<i></i></dt>
+													<dd><a href="#">半身裙</a></dd>
+													<dd><a href="#">套装裙</a></dd>
+													<dd><a href="#">旗袍</a></dd>
+													<dd><a href="#">修身美裙</a></dd>
+													<dd><a href="#">白色连衣裙</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													
+												</dl>
+												<dl>
+													<dt>唯品奢·静..<i></i></dt>
+													<dd><a href="#">中/老年女装</a></dd>
+													<dd><a href="#">商场同款</a></dd>
+													<dd><a href="#">设计师</a></dd>
+													<dd><a href="#">礼服/旗袍</a></dd>
+													<dd><a href="#">民族风</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+												</dl>
+												<dl>
+													<dt>居家日用<i></i></dt>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">厚外套</a></dd>
+													<dd><a href="#">西装</a></dd>
+													<dd><a href="#">夹克</a></dd>
+													<dd><a href="#">皮衣</a></dd>
+													<dd><a href="#">马甲/背心</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+												<dl>
+													<dt>唯品奢·鞋包<i></i></dt>
+													<dd><a href="#">保暖衬衫</a></dd>
+													<dd><a href="#">加绒卫衣</a></dd>
+													<dd><a href="#">Polo衫</a></dd>
+													<dd><a href="#">套头卫衣</a></dd>
+													<dd><a href="#">格子衬衫</a></dd>
+													<dd><a href="#">连帽卫衣</a></dd>
+													<dd><a href="#">短袖T恤</a></dd>
+													<dd><a href="#">条纹T恤</a></dd>
+												</dl>
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									医药健康
+									<div class="n-m-list1-box2">
+										<div class="n-m-list1-box2-1">
+											<div  class="n-m-list1-box2-1-1">
+												<dl>
+													<dt>隐形眼镜<i></i></dt>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">大衣</a></dd>
+													<dd><a href="#">皮衣皮草</a></dd>
+													<dd><a href="#">毛衣</a></dd>
+													<dd><a href="#">连衣裙</a></dd>
+													<dd><a href="#">卫衣</a></dd>
+													<dd><a href="#">休闲裤</a></dd>
+													<dd><a href="#">套装</a></dd>
+												</dl>
+												<dl>
+													<dt>医疗器械<i></i></dt>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">外套</a></dd>
+													<dd><a href="#">牛仔裤</a></dd>
+													<dd><a href="#">妈妈装</a></dd>
+													<dd><a href="#">打底裤</a></dd>
+													<dd><a href="#">风衣</a></dd>
+													<dd><a href="#">针织外套</a></dd>
+													<dd><a href="#">大码女装</a></dd>
+													<dd><a href="#">毛妮大衣</a></dd>
+													<dd><a href="#">长袖T恤</a></dd>
+													<dd><a href="#">防晒衣</a></dd>
+												</dl>
+												
+												<dl>
+													<dt>计生用品<i></i></dt>
+													<dd><a href="#">马甲</a></dd>
+													<dd><a href="#">西装外套</a></dd>
+													<dd><a href="#">短外套</a></dd>
+													<dd><a href="#">毛妮外套</a></dd>
+													<dd><a href="#">棒球服</a></dd>
+													<dd><a href="#">棉衣</a></dd>
+													<dd><a href="#">羽绒服</a></dd>
+													<dd><a href="#">风衣</a></dd>
+												</dl>
+											
+												
+											</div>
+											<div  class="n-m-list1-box2-1-2">
+												<p>品牌推荐</p>
+												<ul>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png"	width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png"  width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24" /><p>xxx</p></li>
+													<li><img src="images/logo10.png" width="48" height="24"/><p>xxx</p></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							</div>
+						</li>
+						<li><a href="index.html" class="n-m-pink">首页</a></li>
+						<li class="n-m-vip"><a href="#"><img src="images/hot.gif" id="hot"/>感恩会员日</a></li>
+						<li><a href="#">最后疯抢</a></li>
+						<li><a href="fast.html">唯品快抢</a></li>
+						<li><a href="#">女装</a></li>
+						<li><a href="#">母婴</a></li>
+						<li><a href="#">家电</a></li>
+						<li><a href="#">国际</a></li>
+						<li><a href="#">美妆</a></li>
+						<li><a href="#">鞋包</a></li>
+						<li><a href="#">预告</a></li>
+						<li><a href="#">更多</a><i></i></li>
+					</ul>
+				</div>
+			</nav>
+			
+		</header>
+		<!--中间大图片-->
+		<section class="bagimg"></section>
+
+		<div class="section-boxx">
+			<section class="f-section">
+				<!--必抢区-->
+				<div class="must-size">
+					<div class="must-left">
+						<a href="">必抢</a>
+					</div>
+					<div class="must-right">
+						<a href="">即将开抢</a>
+					</div>
+				</div>
+				<!--产品展示区-->
+				<div class="listL1">
+					<div class="mainImg">
+						<img src="images/quickly/img28.jpg" width="220px" height: "220px" />
+						<span class="m-a"></span>
+						<span class="m-b"></span>
+						<span class="m-c"></span>
+					</div>
+					<div class="mainFont">
+						<span class="m-d"><img src="images/logo11.png"/></span>
+						<span class="m-e"></span>
+						<p class="m-recored">谜尚 | 【水润三芯】李佳琦推荐 谜尚...</p>
+						<p class="m-recored2">三芯气垫 水润遮瑕</p>
+						<p class="m-shopValue"><span class="m-f">店庆价</span><span class="m-g">￥78</span></p>
+						<p class="m-num"><span class="m-nimg"></span><span class="m-nimg2"></span>累计热卖3.0万件</p>
+					</div>
+				</div>
+				<!--右边盒子-->
+				<div class="listL2">
+					<div class="mainImg">
+						<img src="images/quickly/img20.jpg" width="220px" height: "220px" />
+						<span class="m-a"></span>
+						<span class="m-b"></span>
+						<span class="m-c"></span>
+					</div>
+					<div class="mainFont">
+						<span class="m-d"><img src="images/logo14.png"/></span>
+						<span class="m-e"></span>
+						<p class="m-recored">魅可 | 魅可MAC子弹头经典唇膏【多...</p>
+						<p class="m-recored2">经典子弹头 显色丰润</p>
+						<p class="m-shopValue"><span class="m-f">店庆价</span><span class="m-g">￥136</span></p>
+						<p class="m-num"><span class="m-nimg"></span><span class="m-nimg2"></span>累计热卖3.0万件</p>
+					</div>
+				</div>
+				<ul class="fixNav">
+					<li>
+						<a href="#">海外尖货</a>
+					</li>
+					<li>_________</li>
+					<li>
+						<a href="#">护肤彩妆</a>
+					</li>
+					<li>_________</li>
+					<li>
+						<a href="#">个人护理</a>
+					</li>
+					<li>_________</li>
+					<li>
+						<a href="#">母婴童装</a>
+					</li>
+					<li>_________</li>
+					<li>
+						<a href="#">时尚女装</a>
+					</li>
+					<li>_________</li>
+					<li>
+						<a href="#">品质男装</a>
+					</li>
+					<li>_________</li>
+					<li>
+						<a href="#">男女内衣</a>
+					</li>
+					<li>________</li>
+					<li>
+						<a href="#">鞋靴箱包</a>
+					</li>
+					<li>________</li>
+					<li>
+						<a href="#">家居家纺</a>
+					</li>
+					<li>________</li>
+					<li>
+						<a href="#">生活超市</a>
+					</li>
+					<li>________</li>
+					<li>
+						<a href="#">大小家电</a>
+					</li>
+					<li>________</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>________</li>
+					<li>
+						<a href="#">运动户外</a>
+					</li>
+					<li>________</li>
+					<li>
+						<a href="#">手表配饰</a>
+					</li>
+					<li>________</li>
+					<li>
+						<a href="#">家具配饰</a>
+					</li>
+					<li>________</li>
+					<li>
+						<a href="#">回顶部</a>
+						<span class="backTop"></span>
+					</li>
+					
+				</ul>
+
+			</section>
+		</div>
+
+		<footer class="footer">
+			<div class="f-box">
+				<ul class="fb-ul">
+					<li><i class="fbu-icon">中国第三</i></li>
+					<li><i class="fbu-icon1">全球直采</i></li>
+					<li><i class="fbu-icon2">正品货源</i></li>
+					<li><i class="fbu-icon3">入仓全检</i></li>
+					<li><i class="fbu-icon4">自营物流</i></li>
+					<li><i class="fbu-icon5">线下验真</i></li>
+					<li><i class="fbu-icon6">假货必赔</i></li>
+					<li><i class="fbu-icon7">任意退换</i></li>
+					<li><i class="fbu-icon8">万千信赖</i></li>
+					<li><i class="fbu-icon9">权威荣誉</i></li>
+				</ul>
+				<div class="fb-list">
+					<dl>
+						<dt>服务保障</dt>
+						<dd>正品保证</dd>
+						<dd>7天无理由放心退</dd>
+						<dd>退货返10元唯品币</dd>
+						<dd>7×15小时客户服务</dd>
+						<dd>7天无理由随心换</dd>
+					</dl>
+					<dl>
+						<dt>购物指南</dt>
+						<dd>订单操作</dd>
+						<dd>会员注册</dd>
+						<dd>账户管理</dd>
+						<dd>收货样品</dd>
+						<dd>会员等级</dd>
+					</dl>
+					<dl>
+						<dt>支付方式</dt>
+						<dd>快捷支付</dd>
+						<dd>23家主流网银支付</dd>
+						<dd>支付宝、银联登支付</dd>
+						<dd>信用卡支付</dd>
+						<dd>零钱支付</dd>
+					</dl>
+					<dl>
+						<dt>配送方式</dt>
+						<dd>全场满288元免运费</dd>
+						<dd>配送范围及运费</dd>
+						<dd>验货与签收</dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd>退货政策</dd>
+						<dd>退货流程</dd>
+						<dd>退款方式和时效</dd>
+						<dd>换货服务</dd>
+					</dl>
+					<dl class="fb-list-last">
+						<dt>唯品会APP二维码</dt>
+						<dd><img src="images/f-last.png" /></dd>
+						<dd>下载唯品会移动APP</dd>
+					</dl>
+				</div>
+				<div class="fb-infor">
+					<p class="fb-infor-link">
+						<a href="#">关于我们</a>|
+						<a href="#">About us</a>|
+						<a href="#">Investor Relations</a>|
+						<a href="#">媒体报道</a>|
+						<a href="#">品牌招商</a>|
+						<a href="#">隐私条款</a>|
+						<a href="#">唯品诚聘</a>|
+						<a href="#">唯品卡</a>|
+						<a href="#">联系我们</a>
+					</p>
+					<p class="fb-infor-txt">
+						Copyright © 2008-2019 vip.com，All Rights Reserved&nbsp;&nbsp;使用本网站即表示接受
+						<a href="#">唯品会用户协议</a>。版权所有
+						<a href="#">广州唯品会电子商务有限公司</a><br>
+						<a href="#"><img src="images/logo33.png" width="14" height="14" />粤公网安备 44010302111111号</a>
+						&nbsp;&nbsp;
+						<a href="#">粤ICP备08114786号</a>
+						<a href="#">增值业务经营许可证：粤B2-20170777 </a>
+						<a href="#">网络文化经营许可证：粤网文〔2018〕5030-1743号</a>
+						<a href="#">自营主体经营证照
+							<a href="#">网络文化经营许可证：粤网文〔2018〕5030-1743号</a>
+						</a>
+						&nbsp;&nbsp;
+						<a href="#">风险监测信息</a>
+						&nbsp;&nbsp;
+						<a href="#">互联网药品信息服务资格证书：（粤）-经营性-2018-0271</a>
+						<a href="#"> 网络食品交易第三方平台备案凭证：粤B2-20170777 </a>
+						<a href="#">医疗器械网络交易服务第三方平台备案凭证：（粤）网械平台备字[2019]第00001号</a>
+					</p>
+				</div>
+			</div>
+			<div class="f-ft">
+				<p class="ft-pic">
+					<a href="#"><i class="ft-pic0"></i></a>
+					<a href="#"><i class="ft-pic1"></i></a>
+					<a href="#"><i class="ft-pic2"></i></a>
+					<a href="#"><i class="ft-pic3"></i></a>
+					<a href="#"><i class="ft-pic4"></i></a>
+					<a href="#"><i class="ft-pic5"></i></a>
+					<a href="#"><i class="ft-pic6"></i></a>
+				</p>
+			</div>
+		</footer>
+	</body>
+	<script src="lib/jquery.lazyload.min.js"></script>
+	<script type="text/javascript" src="js/public.js">
+	</script>
+	<script src="js/fast.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

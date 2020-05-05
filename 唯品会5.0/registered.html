@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>唯品会网站注册</title>
+		<link rel="stylesheet" href="css/注册style.css" />
+		<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+	</head>
+	<body>
+		<div id="Hbox">
+			<header>
+				<div id="head-1">
+					<a href="index.html"><img src="images/logo.png" width="150px" height="100px" /></a>
+					<img src="images/logo2.png" width="304px"height="100px" class="iogo2"/>
+				</div>
+			</header>
+			<section>	
+				<div id="sec-img">
+					<div class="bgm"></div>
+					<div id="sec-input">
+						<div id="s-input-1">
+							<p class="vip">会员注册</p>
+							<p class="vip2">已注册可<span class="vip-login"><a href="http://127.0.0.1:8020/唯品会5.0/login.html">直接登录</a></span></p>
+						</div>
+						<div id="s-input-2">
+							<form >
+								<p class="f-Form1"><span></span><input type="text"  id="i-phone" placeholder="手机号/用户名/邮箱" />
+								<i class="error"></i>
+								</p>
+								<p class="message"></p>
+								<p class="f-Form2" id="yan"><span></span><input type="text"  placeholder="请输入验证码" id="i-yan"/>
+								<i class="error2"></i>
+								</p>
+								<button id="i-yan2">获取验证码</button>
+								<p class="message"></p>
+								<p class="f-Form3"><span></span><input type="password" placeholder="密码由6-20位字母，数字和符号组合" id="i-pwt"/>
+								<i class="error"></i>
+								</p>
+								<p class="message"></p>
+								<p class="f-Form4"><span></span><input type="password"   placeholder="请再次输入上面的密码" id="i-repwt"/>
+								<i class="error"></i>
+								</p>
+								<p class="message"></p>
+								<input type="checkbox" id="check" checked="checked" />
+								<p id="input-text">
+									我已阅读并接受以下条款
+								<a href="#">《唯品会服务条款》《隐私条款》《唯品支付用户服务协议》</a></p>
+								<p id="input-yes">接受服务条款才能注册</p>
+								
+							</form>
+							<button id="input-login"  onclick="return checkForm()">立即注册</button>
+						</div>
+					</div>
+				</div>
+				<div id="s-foot">
+					<p>Copyright 2008-2019 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
+				</div>
+			</section>
+			<footer>
+				
+			</footer>
+			<script>
+				var iphone=document.getElementById("i-phone");
+				var messageDoms=document.getElementsByClassName("message");
+				var yan=document.getElementById("i-yan");
+				var psdDom2=document.getElementById("i-repwt");
+				var yan2=document.getElementById("i-yan2");
+				var check=document.getElementsByClassName("check");
+				var error = document.getElementsByClassName("error");
+				var error2 = document.getElementsByClassName("error2");
+				var yes=document.getElementById("input-yes");
+				var fForm1=document.getElementsByClassName("f-Form1");
+				var fForm2=document.getElementsByClassName("f-Form2");
+				var fForm3=document.getElementsByClassName("f-Form3");
+				
+				var fForm4=document.getElementsByClassName("f-Form4");
+				
+				iphone.onfocus = function(){
+			 		fForm1[0].style.border="1px solid #b2b2b2";
+				 }
+				
+				 iphone.onblur = function(){
+				 	//验证用户名是否符合要求
+				 	//11位字符，推荐使用中文名
+				 	var reg=/^[0-9]{11}$/;
+				 	var str = this.value;
+				 	messageDoms[0].style.display = "block";
+				 	if(str==""){ 
+						messageDoms[0].innerHTML="手机号不能为空";
+						fForm1[0].style.border = " 1px solid red";
+						error[0].style.display="block"
+						return false;
+				 	}else if(!reg.test(str)){ 
+				 		messageDoms[0].innerHTML="输入错误，需要是11位数字";
+				 		fForm1[0].style.border = " 1px solid red";
+				 		error[0].style.display="block"
+				 		return false;
+				 	}else{
+				 		iphone.style.border = " none";
+				 		messageDoms[0].innerHTML="";
+				 		yan2.style.cursor="pointer"
+				 		error[0].style.display="none"
+				 		return true;
+				 	}
+			 }
+				 //验证码验证
+	 		 
+				yan.onfocus = function(){
+			 		yan.style.border="1px solid #b2b2b2";
+			 }
+			 //验证码失去焦点
+				yan.onblur = function(){
+			 	var reg=/^[0-9]{6}$/;
+			 	var str = this.value;
+			 	messageDoms[1].style.display = "block";
+			 	if(str==""&&!reg.test(str)){ 
+					messageDoms[1].innerHTML="请输入手机验证码";
+					yan.style.border = " 1px solid red";
+					error2[0].style.display="block"
+					return false;
+			 	}else if(str==""){
+			 		messageDoms[1].innerHTML="验证码不能为空";
+			 		yan.style.border = " 1px solid red";
+			 		error2[0].style.display="block"
+			 		return false;
+			 	}else{
+			 		messageDoms[1].innerHTML="";
+			 		error2[0].style.display="none"
+			 		yan.style.border = "1px solid #b2b2b2";
+			 		return true;
+			 	}
+			 }
+				//验证密码
+				var psdDom=document.getElementById("i-pwt");
+				psdDom.onfocus = function(){
+					fForm3[0].style.border="1px solid #b2b2b2";
+			 	}
+			 	psdDom.onblur = function(){
+			 	var str = this.value;  //密码框的值
+			 	var reg = /[0-9]/g;   //不能全是数字
+			 	var reg1 = /[a-z]/i;   //不能全是数字
+			 	var reg2 = /^[a-zA-Z0-9]{6,20}$///规则5-25个字符
+			 	if(str==""){
+			 		messageDoms[2].innerHTML="密码不能为空";
+			 		fForm3[0].style.border = " 1px solid red";
+			 		error[1].style.display="block"
+					return false;
+			 	}else if(!reg.test(str)){  //reg.test(str)==false
+			 		messageDoms[2].innerHTML="密码不能全是数字";
+			 		fForm3[0].style.border = " 1px solid red";
+			 		error[1].style.display="block"
+					return false;
+			 	}else if(!reg1.test(str)){
+			 		messageDoms[2].innerHTML="密码不能全是字母";
+			 		fForm3[0].style.border = " 1px solid red";
+			 		error[1].style.display="block"
+					return false;
+			 	}else if(!reg2.test(str)){
+			 		messageDoms[2].innerHTML="密码长度6-20个字符";
+			 		fForm3[0].style.border = " 1px solid red";
+			 		error[1].style.display="block"
+					return false;
+			 	}else{
+			 		messageDoms[2].innerHTML="";
+			 		psdDom.style.border = "none";
+			 		error[1].style.display="none"
+					return true;
+			 	}
+			 }
+			 	//再次确认密码
+			 	
+		 			psdDom2.onfocus = function(){
+		 			fForm4[0].style.border="1px solid #b2b2b2";	
+	 			}
+	 			 psdDom2.onblur=function(){
+	 			 	var str=document.getElementById("i-pwt").value;
+	 			 	var str2 = this.value;  //密码框的值
+	 			 	if(str!=str2){
+	 			 		messageDoms[3].innerHTML="密码不一致";
+			 			fForm4[0].style.border = " 1px solid red";
+			 			error[2].style.display="block"
+						return false;
+	 			 	}else if(str2==""){  //reg.test(str)==false
+				 		messageDoms[3].innerHTML="密码不能为空";
+				 		fForm4[0].style.border = " 1px solid red";
+				 		error[2].style.display="block"
+						return false;
+	 			 	}else{
+	 			 		messageDoms[3].innerHTML="";
+	 			 		error[2].style.display="none"
+						psdDom2.style.border = "none";
+						return true;
+	 			 	}
+	 			 }
+	 			
+			 	function checkForm(){
+	 			
+				 	var iphoneflag = iphone.onblur(); //通过代码方式调用onblur方法
+				 	var yanflag = yan.onblur();
+				 	var pwdflag = psdDom.onblur();
+				 	var pwdflag2 = psdDom2.onblur();
+				 	
+				 	//如果用户名 + 密码 + 确认密码  都验证成功了 就返回true 提交，否则返回false不提交 
+				 	
+				 	if(iphoneflag&& pwdflag&&yanflag&&pwdflag2){  //if(userflag==true&&pwdflag == true)
+				 		window.location.href="login.html"
+				 		return true;
+				 	}else{
+				 		if(iphone.value==""){
+				 			messageDoms[0].innerHTML="手机号不能为空";
+				 		}else if(yan.value==""){
+				 			 messageDoms[1].innerHTML= "验证码不能为空";
+				 		}else if(psdDom.value==""){
+				 			 messageDoms[2].innerHTML= "密码不能为空";
+				 		}else if(psdDom2.value==""){
+				 			 messageDoms[3].innerHTML= "密码不能为空";
+				 		}else if(check.checked=false){
+				 			console.log(1)
+				 			yes.style.display="block"
+				 		}
+				 		return false;
+				 	}
+			 }
+	
+			function disable(){
+  				document.getElementById("check").disabled=true
+				yes.style.display="none"
+ 			 }
+			function enable(){
+			  document.getElementById("check").disabled=false
+				yes.style.display="block"
+			 }
+
+			</script>
+		</div>
+	</body>
+</html>

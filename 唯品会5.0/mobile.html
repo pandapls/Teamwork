@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>唯品会手机版下载</title>
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="lib/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="css/mobileAnimation.css">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="lib/jquery.fullpage.js"></script>
+ 
+    
+</head>
+<body>
+    <!-- 固定二维码 -->
+    <div class="page_right">
+                <div class="step_text"></div>
+                <div class="code_area">
+                    <a href="#" class="download_btn"></a>
+                </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="popup">
+        <div class="popup_top">
+            <span>下载手机唯品会</span><i class="close"></i>
+        </div>
+        <div class="popup_mid">
+            <ul>
+                <li><span class="Android">Android</span></li>
+                <li><span  class="iPhone">iPhone</span></li>
+                <li><span   class="iPad" >iPad</span></li>
+                <li><span  class="Windows">Windows</span></li>
+                <li><span  class="wap">wap/触屏</span></li>
+            </ul>
+        </div>
+        <div class="popup_footer">
+            <ul>
+                <li>
+                    <span class="down"><img src="./images/mobile/pop_btn.png" alt="">直接下载到电脑</span>
+                    <span class="warp"><img src="./images/mobile/warp.png" alt="">手机扫码二维码下载</span>
+                </li>
+                <li>
+                    <span class="down"><img src="./images/mobile/pop_btn.png" alt="">前往appstore下载</span>
+                    <span class="warp"><img src="./images/mobile/warp.png" alt="">手机扫码二维码下载</span></li>
+                <li>
+                    <span class="down"><img src="./images/mobile/pop_btn.png" alt="">前往appstore下载</span>
+                    <span class="warp"><img src="./images/mobile/warp.png" alt="">手机扫码二维码下载</span></li>
+                <li>
+                    <span class="down"><img src="./images/mobile/pop_btn.png" alt="">前往windows商店下载</span>
+                    <span class="warp"><img src="./images/mobile/warp.png" alt="">手机扫码二维码下载</span></li>
+                <li>
+                    <span class="down2">通过手机/平板电脑浏览器输入 即可访问网站<img src="./images/mobile/tips.png" alt=""></span>
+                    <span class="warp"><img src="./images/mobile/warp.png" alt="">手机扫码二维码下载</span></li>
+            </ul>
+        </div>
+    </div>
+    <!--头部-->
+	<div class="mobile_header">
+             <div class="mobile_header_in clearfix">
+                <a href="index.html" target="_blank" class="logo">
+                     <img src="images/mobile/logo.png"/>
+                 </a>
+                <span class="logo_text"></span>
+                    <div class="menu_list">
+                        <a  >Android</a>
+                        <a >iPhone</a>
+                        <a>iPad</a>
+                        <a >Windows</a>
+                        <a >wap/触屏</a>
+                    </div>
+                </div>
+     </div>
+
+
+
+     <!--滚动内容  -->
+    <div id="fullpage">
+        <!-- 第一屏 -->
+        <div class="section active">
+                <div class="page page_1" id="page_1">
+                        <div class="page_in page_1g">
+                            <div class="page_left">
+                                <div class="light animateIndown"></div>
+                                <div class="lady01">
+                                    <img src="images/mobile/lady01.png"/>
+                                </div>
+                            </div>
+                           
+                            
+                        </div>
+                    </div>
+        </div>
+        <div class="section">
+            <!--第二屏-->
+			<div class="page page_2" id="page_2">
+                    <div class="page_in page_1g">
+                        <div class="page_left">
+                            <div class="window">
+                                <img src="images/mobile/window.png"/>
+                            </div>
+                            <div class="lady02">
+                                <img src="images/mobile/lady02.png"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+        <div class="section">
+            <!--第三屏-->
+			<div class="page page_3" id="page_3">
+                    <div class="page_in page_sm">
+                        <div class="page_left">
+                            <div class="plant">
+                                <img src="images/mobile/plant.png"/>
+                            </div>
+                            <div class="lady03">
+                                <img src="images/mobile/lady03.png"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+        <div class="section">
+            <!--第四屏-->
+			<div class="page page_4" id="page_4">
+                    <div class="page_in page_sm">
+                        <div class="page_left">
+                            <div class="alipay ">
+                                <img src="images/mobile/alipay.png"/>
+                            </div>
+                            <div class="lady04">
+                                <img src="images/mobile/lady04.png"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+
+    </div>
+</body>
+<script >
+   var $hgt = $(".section").height() ;
+   var $top =$(".page_right").offset().top
+//    var top = $(".page_right").top();
+    $(document).ready(function(){
+        $('#fullpage').fullpage({
+            controlArrows:false,
+            navigation:true,
+            afterRender:function(){
+                console.log('afterender')
+            },
+            onLeave  : function(origin, destination, direction){
+                         var leavingSection = this;
+                        
+                         //after leaving section 2
+
+                            if(origin== 2 && direction == 'up'){
+                                $(".light").addClass("animateIndown")
+                                $(".window").removeClass("animateIndown")
+                                $(".plant").removeClass("animateInright")
+                                $(".alipay").removeClass("animateInright")
+                                $(".step_text").css("background-position-y","0").fadeOut("fast").fadeIn("slow")
+                                
+
+                            }else if(origin== 1 && direction =='down'||origin== 3 && direction =='up'){
+                                $(".light").removeClass("animateIndown")
+                                $(".window").addClass("animateIndown")
+                                $(".plant").removeClass("animateInright")
+                                $(".alipay").removeClass("animateInright")
+                                // $(".page_right").css("top",'991px')
+                                $(".step_text").css("background-position-y","-99px").fadeOut("fast").fadeIn("slow")
+                             
+
+                               
+                                
+
+                                // $(".step_text").fadeOut("slow").fadeIn("slow")
+
+                            }else if(origin== 2 && direction == 'down'||origin== 4 && direction =='up'){
+                                $(".light").removeClass("animateIndown")
+                                $(".window").removeClass("animateIndown")
+                                $(".plant").addClass("animateInright")
+                                $(".alipay").removeClass("animateInright")
+                                // $(".page_right").css("top",'1742px')
+                                $(".step_text").css("background-position-y","-198px").fadeOut("fast").fadeIn("slow")
+                               
+
+                                // $(".step_text").fadeOut("slow").fadeIn("slow")
+
+                            }else if(origin== 3 && direction == 'down'){
+                                $(".light").removeClass("animateIndown")
+                                $(".window").removeClass("animateIndown")
+                                $(".plant").removeClass("animateInright")
+                                $(".alipay").addClass("animateInright")
+                                // $(".page_right").css("top",'2513px')
+                             
+                                $(".step_text").css("background-position-y","-300px").fadeOut("fast").fadeIn("slow")
+                               
+
+                              
+
+
+                                // $(".step_text").fadeOut("slow").fadeIn("slow")
+
+                            }
+            }
+            
+        })
+        
+    })
+        
+   $(function(){
+       $(".popup_mid>ul>li").hover(function(){
+           var $this =$(this).index()
+           var $Left =$(".popup_footer>ul")
+           
+            if($this==0){
+                $(".Android").css("background-image","url(./images/mobile/android-h.png)")
+                $($Left).css("left","0")
+            }else if($this==1){
+                $(".iPhone").css("background-image","url(./images/mobile/iphone-h.png)")
+                $($Left).css("left","-666px")
+                
+            }else if($this==2){
+                $(".iPad").css("background-image","url(./images/mobile/ipad-h.png)")
+                $($Left).css("left","-1320px")
+            }else if($this==3){
+                $(".Windows").css("background-image","url(./images/mobile/windows-h.png) ")
+                $($Left).css("left","-1980px")
+            }else if($this==4){
+                $(".wap").css("background-image","url(./images/mobile/wap-h.png)")
+                $($Left).css("left","-2640px")
+            }
+       },function(){
+				$(".Android").css("background-image","url(./images/mobile/android.png)")
+				$(".iPhone").css("background-image","url(./images/mobile/iphone.png)")
+                $(".iPad").css("background-image","url(./images/mobile/ipad.png)")
+                $(".Windows").css("background-image","url(./images/mobile/windows.png) ")
+				$(".wap").css("background-image","url(./images/mobile/wap.png)")
+       })
+   })
+
+
+
+   $(window).ready(function () {
+      $(".menu_list").children().click(function () {
+        $('.popup').show();
+        $("body,html").css("background-color","rgba(0,0,0,.6)")
+      });
+      
+        $(".close").click(function () {
+            
+            $('.popup').hide()
+        });
+        
+    });
+   
+</script>
+</html>

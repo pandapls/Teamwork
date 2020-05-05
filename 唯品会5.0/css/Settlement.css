@@ -1,0 +1,388 @@
+/*结算的头部*/
+.Set-head{
+	height: 100px;
+	border-bottom: 3px solid #f65aac;
+}
+.Shead-box{
+	margin: 0 auto;
+	width: 960px;
+	height: 80px;
+	position: relative;
+}
+.shead-box-1{
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+}
+.shead-box-2{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.shead-box-2>ul>li{
+	list-style: none;
+	height: 20px;
+	float: left;
+	margin: 0 3px;
+	/*border: 1px solid red;*/
+	position: relative;
+}
+.shead-box-2>ul>li>a{
+	text-align: center;
+	width: 70px;
+	display: inline-block;
+	margin: 0px 5px;
+	color: #828eaa;
+	text-indent: 8px;
+}
+.shead-box-2>ul>li:nth-of-type(2)>a{
+	width: 90px;
+	text-indent: 10px;
+}
+.sh-setbg1{
+	background: url(../images/setbg1.png)-2px 0px no-repeat;
+}
+.sh-setbg2{
+	background: url(../images/setbg2.png)0 -2px no-repeat;
+}
+.sh-setbg3{
+	background: url(../images/setbg3.png)0 0px no-repeat;
+}
+.sh-setbg3>i{    
+	display: inline-block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: url(../images/logo38.png)-266px -167px no-repeat;
+    top: 4px;
+    right: -3px;
+}
+.shead-box-3{
+	position: absolute;
+    bottom: 12px;
+    right: 10px;
+    width: 298px;
+    height: 50px;
+    background: url(../images/logo37.png)-1px -11px no-repeat;
+}
+
+
+/*结算的内容*/
+.set-section{
+	width: 960px;
+	margin: 0 auto;
+}
+.sct-box1{
+	width: 560px;
+	height: 200px;
+	/*border: 1px solid red;*/
+	margin: 0 auto;
+	
+}
+.sct-box1>div{
+	float: left;
+	margin-top:55px;
+}
+.sct-box1>div>p{
+	    line-height: 105px;
+    text-align: center;
+}
+.sct-box1-2{    
+	width: 78px;
+    height: 50px;
+    background: url(../images/logo36.png)-281px -293px no-repeat;
+}
+.sct-box1-3{    
+	width: 145px;
+    height: 50px;
+    background: url(../images/logo36.png)-306px -148px no-repeat;
+}
+.sct-box1-4{    
+	width: 92px;
+    height: 50px;
+    background: url(../images/logo36.png)-8px -347px no-repeat;
+}
+.sct-box1-5{    
+	width: 145px;
+    height: 50px;
+    background: url(../images/logo36.png)-307px -202px no-repeat
+}
+.sct-box1-6{    
+	width: 92px;
+    height: 50px;
+    background: url(../images/logo36.png)-462px -202px no-repeat;
+}
+
+
+.sct-box2{
+	width: 960px;
+	height: 37px;
+	margin: 0 auto;
+	border-bottom: 1px solid #d6d6d6;
+	
+}
+.sct-box2>p{
+	float: left;
+	line-height: 37px;
+}
+.sct-box2-p1{
+	color: #f1018f;
+	text-indent: 10px;
+	width: 80px;
+	height: 35px;
+	font-weight: 700;
+	font-size: 17px;
+	border-bottom: 3px solid #f10180;
+	margin-right:10px ;
+}
+.sct-box2-p2{
+	color: #444444;
+	height: 35px;
+	margin-left:10px ;
+	font-size: 17px;
+}
+
+.sct-box3{
+	width: 960px;
+	height: 30px;
+	margin: 20px auto;
+}
+.sct-box3>p{
+	font-size: 16px;
+}
+.sct-box3>p>span{
+	display: inline-block;
+	width: 60px;
+	margin: 0 3px;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.sct-box4{
+	width: 960px;
+	height: 600px;
+	margin: 0px auto;
+}
+.sct-box4-1{
+	height: 40px;
+	background: #f9f9f9;
+	border: 1px solid #e3e3e3;
+	border-left: 2px solid #f10180;
+	position: relative;
+}
+.sct-box4-1>span{
+	display: inline-block;
+	text-align:right;
+	position: absolute;
+	top: 10px;
+	
+}
+.sct-box4-1>span.sctbox4-1-pink{
+	color: #f14696;
+	font-size: 16px;
+	left: 20px;
+}
+.sct-box4-1>span:nth-of-type(2){
+	left: 350px;
+}
+.sct-box4-1>span:nth-of-type(3){
+	left: 550px;
+}
+.sct-box4-1>span:nth-of-type(4){
+	left: 700px;
+}
+.sct-box4-1>span:nth-of-type(5){
+	left: 850px;
+}
+
+.sct-box4-2{
+	/*height: 90px;*/
+	/*border: 1px solid #e3e3e3;*/
+	position: relative;
+}
+.sct-box4-2-1{
+	width: 958px;
+	height: 90px;
+	position: relative;
+	border: 1px solid #e3e3e3;
+	border-top: none;
+	
+	
+}
+.sct-box4-2-1>img{
+	margin: 10px 10px;
+	margin-left: 20px;
+}
+.sct-box4-2-1-1{
+	width: 150px;
+	position: absolute;
+	top: 8px;
+	left: 96px;
+}
+.sct-box4-2-1-1>p{
+	margin-top: 5px;
+}
+.sct-box4-2-1-1>p>span{
+	color: #f43a9a;
+}
+.sct-box4-2-1>span{
+	position: absolute;
+	top:20px;
+}
+.sct-box4-2-1>span:nth-of-type(1){
+	left: 350px;
+}
+.sct-box4-2-1>span:nth-of-type(2){
+	left: 550px;
+}
+.sct-box4-2-1>span:nth-of-type(2)>i{
+	display: inline-block;
+	border: 1px solid #e3e3e3;
+	font-size: 10px;
+		text-align: center;
+		line-height: 15px;
+		cursor: pointer;
+}
+.sct-box4-2-1>span:nth-of-type(3){
+	left: 700px;
+}
+.sct-box4-2-1>span:nth-of-type(4){
+	left: 850px;
+	cursor: pointer;
+}
+i.s-number{
+	width: 20px;
+	height: 15px;
+
+}
+i.add{
+	width: 15px;
+	height: 15px;
+}
+i.less{
+	width: 15px;
+	height: 15px;	
+}
+
+
+.sct-box4-3{
+	width: 958px;
+	height: 40px;
+	position: relative;
+	border: 1px solid #e3e3e3;
+	border-top: none;
+}
+.sct-box4-3>p{
+	height: 40px;
+	line-height: 40px;
+}
+.sct-box4-3>p>span{
+	background: #ff9933;
+	color: #fff;
+	width: 50px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	margin: 0 20px;
+}
+
+.sct-box4-4{
+	width: 960px;
+	height: 100px;
+	margin: 20px auto;
+	position: relative;
+	border: 1px solid #e3e3e3;
+	
+}
+.sct-box4-4-1{
+	width: 145px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.sct-box4-4-1>span{
+	width: 100px;
+	display: inline-block;
+	border: 1px solid #faa7d3;
+	text-indent: 5px;
+	border-radius: 2px;
+	margin: 5px 10px;
+	background: url(../images/setbg4.png)83px 3px no-repeat;
+	color: #f43892;
+	cursor: pointer;
+}
+.sct-box4-4-2{
+	position: absolute;
+	top: 14px;
+    right: 10px;
+    }
+.all-number{
+	color: #ee61ad;
+	margin: 0 2px;
+}
+.number-money{
+	margin-left: 95px;
+}
+.all-number-money{
+	margin-left: 108px;
+	font-size: 16px;
+	color: #ee61ad;
+	
+}
+
+.sct-box4-5{
+	background-color: #f9f9f9;
+	width: 960px;
+	height: 40px;
+	margin: 0 auto;
+	text-align: right;
+}
+.sct-box4-5-btn{
+	width: 170px;
+	border: none;
+	height:40px ;
+	background-color: #f10180;
+	color: #fff;
+	margin-left: 10px;
+	cursor: pointer;
+	outline: none;
+}
+
+.sct-box4-6{
+	width: 960px;
+	height: 150px;
+	margin: 50px auto;
+}
+.sct-box4-6>div{
+	width: 306px;
+    height: 144px;
+	background: url(../images/logo36.png)0px 0px no-repeat;
+	float: left;
+	margin: 0 5px;
+}
+.sct-box4-6>div.sct-box4-6-1{
+	background-position-x:-303px;
+}
+.sct-box4-6>div.sct-box4-6-3{
+	background-position-y:-144px;
+}
+
+
+.checkbox{
+	
+}
+#all-check{
+	position: absolute;
+	right: 40px;
+    top: 14px;
+}
+label{
+	position: absolute;
+	    right: 12px;
+    top: 11px
+}
+.check-position{
+	position: absolute;
+    right: 41px;
+    top: 23px;
+}

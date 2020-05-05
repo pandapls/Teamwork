@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>唯品会-订单信息</title>
+		<link rel="stylesheet" href="./css/Order.css">
+		<link rel="stylesheet" href="./css/public.css">
+		
+		
+
+		
+	</head>
+
+	<body>
+		<!-- 头部开始 -->
+		<header class="header">
+			<div class="wrap topNav">
+				<div class="fl wphLogo">
+					<a href="index.html"><img src="./images/orderlogo1.png" alt=""></a>
+				</div>
+				<div class="fr wphLogofr">
+					<div class="site-nav">
+						<div id="vip" class="fr"><i class="vip-fW"></i>
+							<a href="#" id="vip-wt">会员服务</a> <i class="dom"></i>
+							<ul class="servers-dropdown">
+								<li>
+									<a href="helpcenter.html">帮助中心</a>
+								</li>
+								<li>
+									<a href="#">会员反馈</a>
+								</li>
+								<li>
+									<a href="#">会员俱乐部</a>
+								</li>
+
+							</ul>
+						</div>
+
+						<p class="fr hello">你好，188*******8 <span class="welcome-text"></span>
+							<a href="#">[退出]</a> &nbsp;
+							<a href="#">订单管理</a> &nbsp;<span id="line"></span> &nbsp;<i id="mPhone"></i> 400-6788-888&nbsp;
+							<span id="line"></span>&nbsp;<i id="rengong"> &nbsp; </i>
+							<a href="#">在线客服</a>&nbsp;<span id="line"></span></p>
+
+					</div>
+
+				</div>
+				<ul class="fr down-img">
+					<li><span class="helper-small-glyphicon"></span>
+						<a href="#">100正品保证</a>
+					</li>
+					<li><span class="helper-small02-glyphicon"></span>
+						<a href="#">七天无理由放心退</a>
+					</li>
+					<li><span class="helper-small03-glyphicon"></span>
+						<a href="#">限时抢购</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</header>
+		<!-- 头部结束 -->
+		<!-- 中间内容部分 -->
+		<div class="wrap middles">
+			<!-- 确认流程 -->
+			<div class="step-confirm">
+
+				<div class="fl flow-step">
+					<a href="#">
+						<div class="gouLogo"></div>
+						<div class="lookshopp">查看购物袋</div>
+					</a>
+				</div>
+				<div class="fl line-finished"></div>
+				<!-- 确认信息 -->
+				<div class="fl frlow-step">
+					<a href="#">
+						<div class="checkout-finished">
+
+						</div>
+						<div class="queRebXinX">确认信息</div>
+					</a>
+
+				</div>
+				<div class="fl line-unfinished"></div>
+				<!-- 成功订单 -->
+				<div class="fl pay-unfinished">
+					<a href="#">
+						<div class="good-finished">
+
+						</div>
+						<div class="chengG">成功提交订单</div>
+					</a>
+
+				</div>
+
+			</div>
+			<!-- 配送 -->
+			<div class="wrap fl channelTips-inner">
+				<div class="fl">
+					<h3><span id="addcu">配送至</span>南山区 南头街道&nbsp;<span id="lines"></span>&nbsp;</h3>
+				</div>
+				
+				<p class="fl mins">请在<span id="countDown-min-sec"></span>
+					
+					内提交订单，下单后你另有30分钟的支付时间。 <span class="wenHao"></span>
+				</p>
+
+			</div>
+			<div class="wrap receivingInformation">
+				<p class="blckGw fr"><a href="Settlement.html">返回购物袋修改商品</a></p>
+				<p class="fl">收货信息</p>
+			</div>
+
+			<div class="fl wrap formItem">
+				<form action="#submit" id="myform" method="post" onsubmit="renturn">
+					<div class="Consignee">
+						<p class="posTishi">&nbsp;&nbsp;<i class="error_prompt">请输入收货人姓名</i></p>
+						<p><span id="xing">*</span> 收货人： &nbsp;<input type="text"  id="userName" placeholder="收货人"></p>
+
+					</div>
+					<div class="phoneNum">
+						<p class="posTishi-a">&nbsp;&nbsp;<i class="error_prompt">请输入收货人手机号</i></p>
+						<p class="posTishi-b">&nbsp;&nbsp;<i class="error_prompt">请输入收货人手机号</i></p>
+						<p><span id="xing">*</span> 手机号： &nbsp;<input type="text" id="phoneNum-a" placeholder="手机号"> &nbsp; &nbsp;&nbsp;备用号码： &nbsp;<input type="text" value=" " id="fixdephone" placeholder="手机号/区号-固定电话"></p>
+					</div>
+					<div class="shTime">
+						<p><span id="xing">*</span> 收货日期： &nbsp;
+							<select name="" id="time">
+								<option value="周一至周日均可收货">周一至周日均可收货</option>
+								<option value="周六日、节假日收货">周六日、节假日收货</option>
+								<option value="周一至周五收货">周一至周五收货</option>
+							</select>
+						</p>
+					</div>
+					
+					<div class="fl wrap phoneNum">
+						<p class="xiangXDZ-tishi">
+							必须填写省市区、填写路名、门牌号！
+						</p>
+						<p><span id="xing">*</span> 详细地址：&nbsp; &nbsp;<input type="text" id="xiangXDZ" placeholder="详细地址"></p>
+					</div>
+					<!-- 地址类型 -->
+					<div class="fl wrap address">
+						<label>地址类型：</label>
+						<span class="ui-radio">
+						<input type="radio" name="ui-radio-jiaT" id="ui-radio-jiaT">
+						<label for="ui-radio-jiaT">家庭</label>&nbsp; &nbsp;&nbsp;
+						<input type="radio" name="ui-radio-jiaT" id="ui-radio-gongSi">
+						<label for="ui-radio-gongSi">公司</label>&nbsp; &nbsp;&nbsp;
+						<input type="radio" name="ui-radio-jiaT" id="ui-radio-qiTa">
+						<label for="ui-radio-qiTa">其他</label>&nbsp; &nbsp;&nbsp;<span class="wenHao"></span>
+
+						</span>
+					</div>
+					<!-- 默认地址 -->
+					<div class="fl wrap default">
+						<p> <input type="checkbox" name="" id="daGou">
+							<label for="daGou">&nbsp;&nbsp;设为默认地址</label>
+							
+						</p>
+					</div>
+
+				</form>
+				<div class="preservation">
+					<button onclick="checkForm()">保存</button>
+				</div>
+			</div>
+			<div class="wrap receivingInformation">
+				<p class="fl">商品清单 </p>
+
+			</div>
+			<div class="fl wrap order-container">
+				<ul class="delivery-order">
+					<li class="delivery-order-h3">
+						<h3>唯品会 发货订单</h3>
+					</li>
+					<li class="delivery-order-fonts">尺码</li>
+					<li class="delivery-order-font">单价</li>
+					<li class="delivery-order-fontl">数量</li>
+
+				</ul>
+				<div class="wrap order-subpanel">
+					<p><i class="con-time"></i>预计 <span>明天</span> 送达</p>
+				</div>
+				<ul class="wrap goods-item">
+					<li class="group-item">
+						<a href="ShangPingXiangQingYe.html">
+
+							<div class="fl group-item-img">
+								<img src="images/qiuji02.jpg" width="32" height="42" />
+
+							</div>
+							<p class="fl">【秋冬新品】优雅高领长袖拼接蕾丝螺纹针织连衣裙</p>
+						</a>
+					</li>
+					<li class="goods-item-font"><span>均码</span></li>
+
+					<li class="goods-item-font"><span class="danjia1">159</span></li>
+
+					<li class="goods-item-font"><span class="null1">1</span></li>
+				</ul>
+				<ul class="wrap goods-item">
+					<li class="group-item">
+						<a href="ShangPingXiangQingYe.html">
+
+							<div class="fl group-item-img">
+								<img src="images/bg43.jpg" width="32" height="42" />
+
+							</div>
+							<p class="fl"> &nbsp;2019年秋冬新款修身拼接网纱蕾丝中长款针织打底连衣裙女</p>
+						</a>
+					</li>
+					<li class="goods-item-font"><span>均码</span></li>
+
+					<li class="goods-item-font"><span class="danjia2">159</span></li>
+
+					<li class="goods-item-font"><span class="null2">1</span></li>
+				</ul>
+				<div class="fl wrap commodity-prices">
+					<p class="fr">运费：&nbsp;&nbsp;免费运&nbsp;&nbsp;&nbsp;&nbsp;本组商品金额：&nbsp;&nbsp;<span id="totalPrice">￥159</span></p>
+				</div>
+
+			</div>
+			<div class="wrap receivingInformation">
+				<p class="fl">支付信息 </p>
+
+			</div>
+			<div class="wrap fl myAssets">
+				<p>我的资产</p>
+				<p class="hpPlay"><input type="checkbox" name="" id="play" value="" />&nbsp;&nbsp;
+					<label for="play">唯品会卡支付</label>
+
+				</p>
+			</div>
+			<div class="fl Payment">
+				<h3>支付方式</h3>
+				<div class="online-pay">
+					<p><i class="riaGreen"></i>&nbsp;&nbsp;<span class="online-pay-in">在线支付</span>&nbsp;&nbsp;&nbsp;支持绝大多数银行卡、微信支付等，可在提交订单后选择。</p>
+					<p class="bank">如唯品金融、中国建设银行、中国工商银行、中国农业银行、中国银行、微信支付等</p>
+				</div>
+			</div>
+			<div class="fl invoice">
+				<h3 class="invoice-xinXi">发票信息</h3>
+				<br />
+				<p class="hpPlay"><input type="checkbox" name="" id="faPiao" value="" />
+					<label for="faPiao">开具发票&nbsp;<i class="question-mark"></i></label>
+			</div>
+			<div class="wrap fl review">
+				<ul class="review-price-list">
+					<li>
+						商品金额： &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<span class="w-price">
+						<span class="a-price">￥</span>
+						<span class="b-price">159</span>
+						</span>
+
+					</li>
+					<li>
+						运费： &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+						<span class="w-price">
+						<span class="a-price">￥</span>
+						<span class="b-price">0</span>
+						</span>
+
+					</li>
+					<li id="bigFont">
+						待支付：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<span class="w-price">
+						<span class="c-price">￥</span>
+						<span class="d-price">0</span>
+						</span>
+
+					</li>
+				</ul>
+				<div class="deliverTo">
+					<span class="review-item-title">送货至:</span>
+
+					<span class="review-item-text">
+					
+				</span>
+
+				</div>
+				<div class=" wrap placeOrder">
+					<div class="f-placeOrder">
+						请在倒计时结束前提交订单 &nbsp;<span class="wenhao-s"></span>
+
+					</div>
+					<div class="fl subimt-time">
+						<a class="subimt-time-c">
+							<span class="subimt-time-btn">提交订单</span>
+							<span id="subimt-time-min-sec"> </span>
+						</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="fl sectionButtom">
+				<div class="fl sectionButtom-img"></div>
+				<div class="fl sectionButtom-img-a"></div>
+				<div class="fl sectionButtom-img-b"></div>
+
+			</div>
+			</br>
+			</br>
+			</br>
+			<footer class="fl footer" id="footers">
+				<div class="f-box">
+					<ul class="fb-ul">
+						<li><i class="fbu-icon">中国第三</i></li>
+						<li><i class="fbu-icon1">全球直采</i></li>
+						<li><i class="fbu-icon2">正品货源</i></li>
+						<li><i class="fbu-icon3">入仓全检</i></li>
+						<li><i class="fbu-icon4">自营物流</i></li>
+						<li><i class="fbu-icon5">线下验真</i></li>
+						<li><i class="fbu-icon6">假货必赔</i></li>
+						<li><i class="fbu-icon7">任意退换</i></li>
+						<li><i class="fbu-icon8">万千信赖</i></li>
+						<li><i class="fbu-icon9">权威荣誉</i></li>
+					</ul>
+					<div class="fb-list">
+						<dl>
+							<dt>服务保障</dt>
+							<dd>正品保证</dd>
+							<dd>7天无理由放心退</dd>
+							<dd>退货返10元唯品币</dd>
+							<dd>7×15小时客户服务</dd>
+							<dd>7天无理由随心换</dd>
+						</dl>
+						<dl>
+							<dt>购物指南</dt>
+							<dd>订单操作</dd>
+							<dd>会员注册</dd>
+							<dd>账户管理</dd>
+							<dd>收货样品</dd>
+							<dd>会员等级</dd>
+						</dl>
+						<dl>
+							<dt>支付方式</dt>
+							<dd>快捷支付</dd>
+							<dd>23家主流网银支付</dd>
+							<dd>支付宝、银联登支付</dd>
+							<dd>信用卡支付</dd>
+							<dd>零钱支付</dd>
+						</dl>
+						<dl>
+							<dt>配送方式</dt>
+							<dd>全场满288元免运费</dd>
+							<dd>配送范围及运费</dd>
+							<dd>验货与签收</dd>
+						</dl>
+						<dl>
+							<dt>售后服务</dt>
+							<dd>退货政策</dd>
+							<dd>退货流程</dd>
+							<dd>退款方式和时效</dd>
+							<dd>换货服务</dd>
+						</dl>
+						<dl class="fb-list-last">
+							<dt>唯品会APP二维码</dt>
+							<dd><img src="images/f-last.png" /></dd>
+							<dd>下载唯品会移动APP</dd>
+						</dl>
+					</div>
+					<div class="fb-infor">
+						<p class="fb-infor-link">
+							<a href="#">关于我们</a>|
+							<a href="#">About us</a>|
+							<a href="#">Investor Relations</a>|
+							<a href="#">媒体报道</a>|
+							<a href="#">品牌招商</a>|
+							<a href="#">隐私条款</a>|
+							<a href="#">唯品诚聘</a>|
+							<a href="#">唯品卡</a>|
+							<a href="#">联系我们</a>
+						</p>
+						<p class="fb-infor-txt">
+							Copyright © 2008-2019 vip.com，All Rights Reserved&nbsp;&nbsp;使用本网站即表示接受
+							<a href="#">唯品会用户协议</a>。版权所有
+							<a href="#">广州唯品会电子商务有限公司</a><br>
+							<a href="#"><img src="images/logo33.png" width="14" height="14" />粤公网安备 44010302111111号</a>
+							&nbsp;&nbsp;
+							<a href="#">粤ICP备08114786号</a>
+							<a href="#">增值业务经营许可证：粤B2-20170777 </a>
+							<a href="#">网络文化经营许可证：粤网文〔2018〕5030-1743号</a>
+							<a href="#">自营主体经营证照
+								<a href="#">网络文化经营许可证：粤网文〔2018〕5030-1743号</a>
+							</a>
+							&nbsp;&nbsp;
+							<a href="#">风险监测信息</a>
+							&nbsp;&nbsp;
+							<a href="#">互联网药品信息服务资格证书：（粤）-经营性-2018-0271</a>
+							<a href="#"> 网络食品交易第三方平台备案凭证：粤B2-20170777 </a>
+							<a href="#">医疗器械网络交易服务第三方平台备案凭证：（粤）网械平台备字[2019]第00001号</a>
+						</p>
+					</div>
+				</div>
+				<div class="f-ft">
+					<p class="ft-pic">
+						<a href="#"><i class="ft-pic0"></i></a>
+						<a href="#"><i class="ft-pic1"></i></a>
+						<a href="#"><i class="ft-pic2"></i></a>
+						<a href="#"><i class="ft-pic3"></i></a>
+						<a href="#"><i class="ft-pic4"></i></a>
+						<a href="#"><i class="ft-pic5"></i></a>
+						<a href="#"><i class="ft-pic6"></i></a>
+					</p>
+				</div>
+			</footer>
+			<!-- 底部结束-->
+
+		</div>
+		
+
+	</body>
+	<script src="js/order.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+	
+
+</html>
